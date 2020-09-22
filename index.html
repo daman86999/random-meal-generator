@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container mt-3">
+        <div class="row col-sm-4
+        col-md-12 mx-auto mx-lg-1 mt-5">
+            <div class="col-lg-5 ">
+                <h3 class=" mt-2">Feeling Hungary?</h3>
+                <h5 class="mt-2 text-secondary">Get a random meal by clicking</h5>
+                <div class="d-sm-none">
+                    <button class="btn btn-primary mt-lg-3 mt-2 get-meal" id="btn-1" >Get Meal 🍕</button>
+                    </div>
+            </div>
+            <div class="d-none d-lg-block">
+            <button class="btn btn-primary mt-lg-3 mt-2 get-meal" id="btn-2" >Get Meal 🍕</button>
+            </div>
+        </div>
+        <div class="row meal col-12 mt-4 ml-1" id="meal"></div>
+    </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="app.js">
+</script>
 </html>
