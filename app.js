@@ -21,16 +21,42 @@ function createMeal(meal){
     console.log(lines);
     var list= lines.join("<li>");
 
+    const ingredients = [];
+
+	for(let i=1; i<=20; i++) {
+		if(meal[`strIngredient${i}`]) {
+			ingredients.push(`${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`)
+		} else {
+			break;
+		}
+	}
+
     mealContainer.innerHTML=`
         <div class="row">
+        </h3>
             <div class="col-lg-5">
+                <h5 class="mt-3 mealNm d-sm-none" >${meal.strMeal}</h5>
                  <img class="img-fluid  mealImg mt-4" src="${meal.strMealThumb}" alt="Meal Img"></img> 
-                 <h6 class="mt-4 ml-3">Category : ${meal.strCategory}</h3> 
-                 <h6 class="mt-2 ml-3 mb-5">Origin : ${meal.strArea}</h3> 
-                                
+                 <h6 class="mt-4 ml-3">Category : ${meal.strCategory}</h6> 
+                 <h6 class="mt-2 ml-3 ">Origin : ${meal.strArea}</h6> 
+                <h6 class="mt-3 ml-3 mealNm">Ingridients</h6>
+                 <ul>
+					${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+				</ul>              
             </div>
-            <div class="col-lg-7 "> <h3 class="mt-3" >${meal.strMeal}</h3>
-            <p class="text-secondary"><ul>${list}</ul></p></div>
+            <div class="col-lg-7 "> <h2 class="mt-3 mealNm d-none d-lg-block" >${meal.strMeal}</h3>
+            <h6 class="d-block d-sm-none mealNm mt-3 ml-3">Instructions</h6>
+            <p class="text-secondary"><ul>${list}</ul></p>
+            
+            </div>
+            <div class="row col-12 mx-auto">
+            <h3 class="mealNm mt-3">Video Recipie</h3>
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
+            <iframe class="embed-responsive-item"
+				src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}">
+                </iframe>
+            </div>
+            </div>
         </div>
     `;
     

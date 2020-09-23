@@ -1,5 +1,29 @@
 
+
 .mealImg{
     border-radius:50% 50% 82% 18% / 49% 65% 35% 51% ;
     box-shadow: -8px 7px 13px 0px rgba(0,0,0,0.3);
+}
+
+h6{
+    font-family: 'Gloria Hallelujah', cursive
+}
+
+li{
+    font-family: 'Gloria Hallelujah', cursive
+}
+
+h2{
+    font-family: 'Monoton', sans-serif;
+    letter-spacing: 0.3rem;
+}
+
+.mealNm{
+    font-family: 'Bungee', cursive;
+}
+
+iframe{
+    border: 0;
+    frameborder:0;
+    border-radius: 4px;
 }
