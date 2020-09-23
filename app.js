@@ -35,7 +35,7 @@ function createMeal(meal){
         <div class="row">
         </h3>
             <div class="col-lg-5">
-                <h5 class="mt-3 mealNm d-sm-none" >${meal.strMeal}</h5>
+                <h5 class="mt-3 mealNm d-lg-none" >${meal.strMeal}</h5>
                  <img class="img-fluid  mealImg mt-4" src="${meal.strMealThumb}" alt="Meal Img"></img> 
                  <h6 class="mt-4 ml-3">Category : ${meal.strCategory}</h6> 
                  <h6 class="mt-2 ml-3 ">Origin : ${meal.strArea}</h6> 
@@ -45,7 +45,7 @@ function createMeal(meal){
 				</ul>              
             </div>
             <div class="col-lg-7 "> <h2 class="mt-3 mealNm d-none d-lg-block" >${meal.strMeal}</h3>
-            <h6 class="d-block d-sm-none mealNm mt-3 ml-3">Instructions</h6>
+            <h6 class="d-block d-lg-none mealNm mt-3 ml-3">Instructions</h6>
             <p class="text-secondary"><ul>${list}</ul></p>
             
             </div>
